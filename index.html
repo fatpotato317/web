@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$SOLDAY - Solana Birthday Celebration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:opsz,wght@10..72,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: linear-gradient(135deg, #9400f7, #0019f7);
+            color: white;
+            text-align: center;
+            font-family: "Big Shoulders Inline", sans-serif;
+            font-size: 26px;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .timer {
+            font-size: 4.2em;
+            margin: 60px 0;
+            padding: 25px;
+        }
+        .buy-button {
+            background-color: #ffcc00;
+            color: black;
+            padding: 35px 50px;
+            font-size: 2.8em;
+            text-decoration: none;
+            border-radius: 15px;
+        }
+        .solana-image {
+            width: 350px;
+            margin: 35px auto;
+            display: block;
+        }
+        .section {
+            background-color: #000000;
+            border-radius: 25px;
+            padding: 45px;
+            margin: 45px auto;
+            max-width: 1000px;
+            transition: transform 0.3s ease-in-out;
+            border: 8px solid white;
+        }
+        .section:hover {
+            transform: scale(1.1);
+        }
+        .footer {
+            background-color: #212121;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 20px 0;
+        }
+        .footer a {
+            color: white;
+            margin: 0 20px;
+            font-size: 1em;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: #ffcc00;
+        }
+        @keyframes glow {
+            0% { text-shadow: 0 0 20px #ffcc00; }
+            50% { text-shadow: 0 0 35px #ffcc00; }
+            100% { text-shadow: 0 0 20px #ffcc00; }
+        }
+        h1 {
+            animation: glow 2s infinite alternate;
+            font-size: 4.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Celebrating Solana’s Birthday with $SOLDAY!</h1>
+        <div class="timer" id="countdown"></div>
+        <a class="buy-button" href="https://dexscreener.com/swap/solana/FWgWtFt9fesjCwmYEduBjymJPRfXiJSUqzajH9g6Wugd?embed=1&theme=light&dsApp=1" target="_blank">BUY $SOLDAY</a>
+        <div class="section">
+          <h2>About $SOLDAY</h2>
+          <p>$SOLDAY is the ultimate memecoin tribute to Solana’s birthday! Born to celebrate the speed, power, and community of Solana, $SOLDAY is more than just a token—it’s a yearly crypto party!</p>
+          <p>Every year on Solana’s birthday, we bring airdrops, events, and celebrations to the Solana ecosystem. No team allocations, no VC funding—just a fun, community-driven coin honoring the blockchain we love.</p>
+          <p>Join us, grab some $SOLDAY, and let’s make Solana’s birthday the biggest party in crypto! 🎉</p>
+        </div>
+        <div class="section">
+          <h2>Roadmap</h2>
+          <p>Phase 1: Launch | Phase 2: Community Growth | Phase 3: Utility Expansion</p>
+          <h2>Community & Socials</h2>
+        </div>
+      <br><br><br><br><br><br><br>
+    </div>
+    <div class="footer">
+        <a href="#">Twitter</a> | 
+        <a href="#">Telegram</a> | 
+        <a href="#">Discord</a>
+        <p style="margin-top: 10px; font-size: 0.9em; color: gray;">&copy; 2025 $SOLDAY. All Rights Reserved.</p>
+    </div>
+    <script>
+        function updateCountdown() {
+            const targetDate = new Date("March 16, 2025 00:00:00 UTC").getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            document.getElementById("countdown").innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            setTimeout(updateCountdown, 1000);
+        }
+        updateCountdown();
+    </script>
+</body>
+</html>
